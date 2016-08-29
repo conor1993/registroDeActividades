@@ -1,0 +1,16 @@
+C:\Users\Sugey\Documents\Visual Studio 2010\Projects\registroActividades\registroActividades\bin\Release\registroActividades.exe
+C:\Users\Sugey\Documents\Visual Studio 2010\Projects\registroActividades\registroActividades\obj\x86\Release\registroActividades.formas.frmClientes.resources
+C:\Users\Sugey\Documents\Visual Studio 2010\Projects\registroActividades\registroActividades\obj\x86\Release\registroActividades.formas.frmFormas.resources
+C:\Users\Sugey\Documents\Visual Studio 2010\Projects\registroActividades\registroActividades\obj\x86\Release\registroActividades.formas.frminicio.resources
+C:\Users\Sugey\Documents\Visual Studio 2010\Projects\registroActividades\registroActividades\obj\x86\Release\registroActividades.frmMenu.resources
+C:\Users\Sugey\Documents\Visual Studio 2010\Projects\registroActividades\registroActividades\obj\x86\Release\registroActividades.formas.frmModulo.resources
+C:\Users\Sugey\Documents\Visual Studio 2010\Projects\registroActividades\registroActividades\obj\x86\Release\registroActividades.formas.frmProyectos.resources
+C:\Users\Sugey\Documents\Visual Studio 2010\Projects\registroActividades\registroActividades\obj\x86\Release\registroActividades.formas.frmRegistroActivadades.resources
+C:\Users\Sugey\Documents\Visual Studio 2010\Projects\registroActividades\registroActividades\obj\x86\Release\registroActividades.Properties.Resources.resources
+C:\Users\Sugey\Documents\Visual Studio 2010\Projects\registroActividades\registroActividades\obj\x86\Release\registroActividades.csproj.GenerateResource.Cache
+C:\Users\Sugey\Documents\Visual Studio 2010\Projects\registroActividades\registroActividades\obj\x86\Release\registroActividades.exe
+C:\Users\Sugey\Documents\Visual Studio 2010\Projects\registroActividades\registroActividades\obj\x86\Release\registroActividades.pdb
+C:\Users\Sugey\Documents\Visual Studio 2010\Projects\registroActividades\registroActividades\bin\Release\registroActividades.exe.config
+C:\Users\Sugey\Documents\Visual Studio 2010\Projects\registroActividades\registroActividades\bin\Release\registroActividades.pdb
+C:\Users\Sugey\Documents\Visual Studio 2010\Projects\registroActividades\registroActividades\obj\x86\Release\registroActividades.formas.frmActividadesDiarias.resources
+C:\Users\Sugey\Documents\Visual Studio 2010\Projects\registroActividades\registroActividades\obj\x86\Release\registroActividades.formas.frmActividades.resources

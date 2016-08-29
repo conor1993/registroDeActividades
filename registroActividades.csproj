@@ -1,0 +1,232 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DAA53E40-7016-4E24-AF52-9C83AB95C499}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>registroActividades</RootNamespace>
+    <AssemblyName>registroActividades</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>\\Users\Sugey\Desktop\registro\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Unc</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>0337AC2AE94E2EA11C3AD4ED2B8042FA9C25CA82</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>registroActividades_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="clases\Conexion.cs" />
+    <Compile Include="formas\frmActividades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formas\frmActividades.Designer.cs">
+      <DependentUpon>frmActividades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formas\frmActividadesDiarias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formas\frmActividadesDiarias.Designer.cs">
+      <DependentUpon>frmActividadesDiarias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formas\frmClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formas\frmClientes.Designer.cs">
+      <DependentUpon>frmClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formas\frmFormas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formas\frmFormas.Designer.cs">
+      <DependentUpon>frmFormas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formas\frminicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formas\frminicio.Designer.cs">
+      <DependentUpon>frminicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formas\frmMenuPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formas\frmMenuPrincipal.Designer.cs">
+      <DependentUpon>frmMenuPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formas\frmModulo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formas\frmModulo.Designer.cs">
+      <DependentUpon>frmModulo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formas\frmProyectocs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formas\frmProyectocs.Designer.cs">
+      <DependentUpon>frmProyectocs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formas\frmRegistroActivadades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formas\frmRegistroActivadades.Designer.cs">
+      <DependentUpon>frmRegistroActivadades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="clases\usuario.cs" />
+    <EmbeddedResource Include="formas\frmActividades.resx">
+      <DependentUpon>frmActividades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formas\frmActividadesDiarias.resx">
+      <DependentUpon>frmActividadesDiarias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formas\frmClientes.resx">
+      <DependentUpon>frmClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formas\frmFormas.resx">
+      <DependentUpon>frmFormas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formas\frminicio.resx">
+      <DependentUpon>frminicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formas\frmMenuPrincipal.resx">
+      <DependentUpon>frmMenuPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formas\frmModulo.resx">
+      <DependentUpon>frmModulo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formas\frmProyectocs.resx">
+      <DependentUpon>frmProyectocs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formas\frmRegistroActivadades.resx">
+      <DependentUpon>frmRegistroActivadades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="resource\Borrar.png" />
+    <Content Include="resource\Buscar.png" />
+    <None Include="resource\guardar.png" />
+    <Content Include="resource\Imprimir.png" />
+    <Content Include="resource\Nuevo.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
