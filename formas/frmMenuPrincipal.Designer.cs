@@ -30,13 +30,15 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.catalogosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.actividadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.proyectoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.moduloToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.formasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registroDeActividadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.actividadesDiariasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.actividadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.formasToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -45,7 +47,8 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.catalogosToolStripMenuItem,
             this.registroDeActividadesToolStripMenuItem,
-            this.actividadesDiariasToolStripMenuItem});
+            this.actividadesDiariasToolStripMenuItem,
+            this.reportesToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(984, 24);
@@ -64,31 +67,38 @@
             this.catalogosToolStripMenuItem.Size = new System.Drawing.Size(72, 20);
             this.catalogosToolStripMenuItem.Text = "Catálogos";
             // 
+            // actividadesToolStripMenuItem
+            // 
+            this.actividadesToolStripMenuItem.Name = "actividadesToolStripMenuItem";
+            this.actividadesToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
+            this.actividadesToolStripMenuItem.Text = "Actividades";
+            this.actividadesToolStripMenuItem.Click += new System.EventHandler(this.actividadesToolStripMenuItem_Click);
+            // 
             // clientesToolStripMenuItem
             // 
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
             this.clientesToolStripMenuItem.Text = "Clientes";
             this.clientesToolStripMenuItem.Click += new System.EventHandler(this.clientesToolStripMenuItem_Click);
             // 
             // proyectoToolStripMenuItem
             // 
             this.proyectoToolStripMenuItem.Name = "proyectoToolStripMenuItem";
-            this.proyectoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.proyectoToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
             this.proyectoToolStripMenuItem.Text = "Proyecto";
             this.proyectoToolStripMenuItem.Click += new System.EventHandler(this.proyectoToolStripMenuItem_Click);
             // 
             // moduloToolStripMenuItem
             // 
             this.moduloToolStripMenuItem.Name = "moduloToolStripMenuItem";
-            this.moduloToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.moduloToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
             this.moduloToolStripMenuItem.Text = "Modulo";
             this.moduloToolStripMenuItem.Click += new System.EventHandler(this.moduloToolStripMenuItem_Click);
             // 
             // formasToolStripMenuItem
             // 
             this.formasToolStripMenuItem.Name = "formasToolStripMenuItem";
-            this.formasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.formasToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
             this.formasToolStripMenuItem.Text = "Formas";
             this.formasToolStripMenuItem.Click += new System.EventHandler(this.formasToolStripMenuItem_Click);
             // 
@@ -106,12 +116,20 @@
             this.actividadesDiariasToolStripMenuItem.Text = "Actividades  diarias";
             this.actividadesDiariasToolStripMenuItem.Click += new System.EventHandler(this.actividadesDiariasToolStripMenuItem_Click);
             // 
-            // actividadesToolStripMenuItem
+            // reportesToolStripMenuItem
             // 
-            this.actividadesToolStripMenuItem.Name = "actividadesToolStripMenuItem";
-            this.actividadesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.actividadesToolStripMenuItem.Text = "Actividades";
-            this.actividadesToolStripMenuItem.Click += new System.EventHandler(this.actividadesToolStripMenuItem_Click);
+            this.reportesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.formasToolStripMenuItem1});
+            this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
+            this.reportesToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
+            this.reportesToolStripMenuItem.Text = "Reportes";
+            // 
+            // formasToolStripMenuItem1
+            // 
+            this.formasToolStripMenuItem1.Name = "formasToolStripMenuItem1";
+            this.formasToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.formasToolStripMenuItem1.Text = "Formas ";
+            this.formasToolStripMenuItem1.Click += new System.EventHandler(this.formasToolStripMenuItem1_Click);
             // 
             // frmMenu
             // 
@@ -144,6 +162,8 @@
         private System.Windows.Forms.ToolStripMenuItem registroDeActividadesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem actividadesDiariasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem actividadesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reportesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem formasToolStripMenuItem1;
     }
 }
 

@@ -65,6 +65,16 @@ namespace registroActividades.formas
            
         }
 
+        private void frmActividadesDiarias_Load(object sender, EventArgs e)
+        {
+            llenarGrid();
+        }
+
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+            crearReporte();
+        }
+
         private void crearReporte()
         {
             Conexion CN = new Conexion();
@@ -103,16 +113,6 @@ namespace registroActividades.formas
 
                 MessageBox.Show(ex.Message);
             }
-        }
-
-        private void frmActividadesDiarias_Load(object sender, EventArgs e)
-        {
-            llenarGrid();
-        }
-
-        private void toolStripButton2_Click(object sender, EventArgs e)
-        {
-            crearReporte();
         }
     }
 }

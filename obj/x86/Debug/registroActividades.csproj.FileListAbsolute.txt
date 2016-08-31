@@ -32,9 +32,9 @@ C:\git\registroActividades\obj\x86\Debug\registroActividades.frmMenu.resources
 C:\git\registroActividades\obj\x86\Debug\registroActividades.formas.frmModulo.resources
 C:\git\registroActividades\obj\x86\Debug\registroActividades.formas.frmProyectos.resources
 C:\git\registroActividades\obj\x86\Debug\registroActividades.formas.frmRegistroActivadades.resources
+C:\git\registroActividades\obj\x86\Debug\registroActividades.formas.frmReporteFormas.resources
 C:\git\registroActividades\obj\x86\Debug\registroActividades.formas.VisorReportes.resources
 C:\git\registroActividades\obj\x86\Debug\registroActividades.Properties.Resources.resources
 C:\git\registroActividades\obj\x86\Debug\registroActividades.csproj.GenerateResource.Cache
 C:\git\registroActividades\obj\x86\Debug\registroActividades.exe
 C:\git\registroActividades\obj\x86\Debug\registroActividades.pdb
-C:\git\registroActividades\obj\x86\Debug\registroActividades.csprojResolveAssemblyReference.cache

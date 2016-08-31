@@ -31,3 +31,5 @@ C:\git\registroActividades\obj\x86\Release\registroActividades.formas.frmRegistr
 C:\git\registroActividades\obj\x86\Release\registroActividades.formas.VisorReportes.resources
 C:\git\registroActividades\obj\x86\Release\registroActividades.Properties.Resources.resources
 C:\git\registroActividades\obj\x86\Release\registroActividades.csproj.GenerateResource.Cache
+C:\git\registroActividades\obj\x86\Release\registroActividades.csprojResolveAssemblyReference.cache
+C:\git\registroActividades\obj\x86\Release\registroActividades.formas.frmReporteFormas.resources

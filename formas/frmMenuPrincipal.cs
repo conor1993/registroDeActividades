@@ -68,5 +68,11 @@ namespace registroActividades
             r.frmActividades frm = new r.frmActividades();
             frm.Show();
         }
+
+        private void formasToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            r.frmReporteFormas frm = new r.frmReporteFormas();
+            frm.Show();
+        }
     }
 }

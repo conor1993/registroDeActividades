@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dtsFormas" targetNamespace="http://tempuri.org/dtsFormas.xsd" xmlns:mstns="http://tempuri.org/dtsFormas.xsd" xmlns="http://tempuri.org/dtsFormas.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dtsFormas" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dtsFormas" msprop:Generator_UserDSName="dtsFormas">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="tablaforma" msprop:Generator_TableClassName="tablaformaDataTable" msprop:Generator_TableVarName="tabletablaforma" msprop:Generator_TablePropName="tablaforma" msprop:Generator_RowDeletingName="tablaformaRowDeleting" msprop:Generator_RowChangingName="tablaformaRowChanging" msprop:Generator_RowEvHandlerName="tablaformaRowChangeEventHandler" msprop:Generator_RowDeletedName="tablaformaRowDeleted" msprop:Generator_UserTableName="tablaforma" msprop:Generator_RowChangedName="tablaformaRowChanged" msprop:Generator_RowEvArgName="tablaformaRowChangeEvent" msprop:Generator_RowClassName="tablaformaRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="bd" msprop:Generator_ColumnVarNameInTable="columnbd" msprop:Generator_ColumnPropNameInRow="bd" msprop:Generator_ColumnPropNameInTable="bdColumn" msprop:Generator_UserColumnName="bd" type="xs:string" minOccurs="0" />
+              <xs:element name="tabla" msprop:Generator_ColumnVarNameInTable="columntabla" msprop:Generator_ColumnPropNameInRow="tabla" msprop:Generator_ColumnPropNameInTable="tablaColumn" msprop:Generator_UserColumnName="tabla" type="xs:string" minOccurs="0" />
+              <xs:element name="sp" msprop:Generator_ColumnVarNameInTable="columnsp" msprop:Generator_ColumnPropNameInRow="sp" msprop:Generator_ColumnPropNameInTable="spColumn" msprop:Generator_UserColumnName="sp" type="xs:string" minOccurs="0" />
+              <xs:element name="vista" msprop:Generator_ColumnVarNameInTable="columnvista" msprop:Generator_ColumnPropNameInRow="vista" msprop:Generator_ColumnPropNameInTable="vistaColumn" msprop:Generator_UserColumnName="vista" type="xs:string" minOccurs="0" />
+              <xs:element name="funcion" msprop:Generator_ColumnVarNameInTable="columnfuncion" msprop:Generator_ColumnPropNameInRow="funcion" msprop:Generator_ColumnPropNameInTable="funcionColumn" msprop:Generator_UserColumnName="funcion" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
