@@ -179,6 +179,12 @@
     <Compile Include="formas\frmReporteFormas.Designer.cs">
       <DependentUpon>frmReporteFormas.cs</DependentUpon>
     </Compile>
+    <Compile Include="formas\frmReporteStore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formas\frmReporteStore.Designer.cs">
+      <DependentUpon>frmReporteStore.cs</DependentUpon>
+    </Compile>
     <Compile Include="formas\FrmVisorDeRpeportes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -198,6 +204,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>reporteDeRegistoActividades.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reportes\reporteStore.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>reporteStore.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <EmbeddedResource Include="formas\frmActividades.resx">
@@ -230,6 +242,9 @@
     <EmbeddedResource Include="formas\frmReporteFormas.resx">
       <DependentUpon>frmReporteFormas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="formas\frmReporteStore.resx">
+      <DependentUpon>frmReporteStore.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="formas\FrmVisorDeRpeportes.resx">
       <DependentUpon>FrmVisorDeRpeportes.cs</DependentUpon>
     </EmbeddedResource>
@@ -250,6 +265,10 @@
     <EmbeddedResource Include="reportes\reporteDeRegistoActividades.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>reporteDeRegistoActividades.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reportes\reporteStore.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>reporteStore.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="app.config" />
     <None Include="dtsFormas.xsc">

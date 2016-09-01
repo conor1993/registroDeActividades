@@ -74,5 +74,11 @@ namespace registroActividades
             r.frmReporteFormas frm = new r.frmReporteFormas();
             frm.Show();
         }
+
+        private void sotreToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            r.frmReporteStore frm = new r.frmReporteStore();
+            frm.ShowDialog();
+        }
     }
 }

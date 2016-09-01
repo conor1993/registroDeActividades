@@ -39,6 +39,7 @@
             this.actividadesDiariasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.formasToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.sotreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -119,7 +120,8 @@
             // reportesToolStripMenuItem
             // 
             this.reportesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.formasToolStripMenuItem1});
+            this.formasToolStripMenuItem1,
+            this.sotreToolStripMenuItem});
             this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
             this.reportesToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
             this.reportesToolStripMenuItem.Text = "Reportes";
@@ -130,6 +132,13 @@
             this.formasToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.formasToolStripMenuItem1.Text = "Formas ";
             this.formasToolStripMenuItem1.Click += new System.EventHandler(this.formasToolStripMenuItem1_Click);
+            // 
+            // sotreToolStripMenuItem
+            // 
+            this.sotreToolStripMenuItem.Name = "sotreToolStripMenuItem";
+            this.sotreToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.sotreToolStripMenuItem.Text = "Sotore";
+            this.sotreToolStripMenuItem.Click += new System.EventHandler(this.sotreToolStripMenuItem_Click);
             // 
             // frmMenu
             // 
@@ -164,6 +173,7 @@
         private System.Windows.Forms.ToolStripMenuItem actividadesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reportesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem formasToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem sotreToolStripMenuItem;
     }
 }
 

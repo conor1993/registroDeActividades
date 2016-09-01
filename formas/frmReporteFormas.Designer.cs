@@ -28,20 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmReporteFormas));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.cmbForma = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.tsbNuevo = new System.Windows.Forms.ToolStripButton();
-            this.tsbGuardar = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.cmbModulo = new System.Windows.Forms.ComboBox();
             this.cmbProyecto = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dataformas = new System.Windows.Forms.DataGridView();
+            this.tsbNuevo = new System.Windows.Forms.ToolStripButton();
+            this.tsbGuardar = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataformas)).BeginInit();
             this.SuspendLayout();
@@ -55,7 +55,7 @@
             this.cmbForma.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cmbForma.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbForma.FormattingEnabled = true;
-            this.cmbForma.Location = new System.Drawing.Point(179, 118);
+            this.cmbForma.Location = new System.Drawing.Point(141, 106);
             this.cmbForma.Name = "cmbForma";
             this.cmbForma.Size = new System.Drawing.Size(275, 24);
             this.cmbForma.TabIndex = 1;
@@ -65,7 +65,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
-            this.label14.Location = new System.Drawing.Point(70, 118);
+            this.label14.Location = new System.Drawing.Point(32, 106);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(59, 15);
             this.label14.TabIndex = 9;
@@ -80,9 +80,83 @@
             this.toolStripButton1});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(509, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(728, 25);
             this.toolStrip1.TabIndex = 13;
             this.toolStrip1.Text = "toolStrip1";
+            // 
+            // cmbModulo
+            // 
+            this.cmbModulo.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cmbModulo.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cmbModulo.BackColor = System.Drawing.Color.White;
+            this.cmbModulo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbModulo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cmbModulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbModulo.FormattingEnabled = true;
+            this.cmbModulo.Location = new System.Drawing.Point(141, 76);
+            this.cmbModulo.Name = "cmbModulo";
+            this.cmbModulo.Size = new System.Drawing.Size(275, 24);
+            this.cmbModulo.TabIndex = 14;
+            this.cmbModulo.SelectedIndexChanged += new System.EventHandler(this.cmbModulo_SelectedIndexChanged);
+            // 
+            // cmbProyecto
+            // 
+            this.cmbProyecto.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cmbProyecto.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cmbProyecto.BackColor = System.Drawing.Color.White;
+            this.cmbProyecto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbProyecto.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cmbProyecto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbProyecto.FormattingEnabled = true;
+            this.cmbProyecto.Location = new System.Drawing.Point(141, 46);
+            this.cmbProyecto.Name = "cmbProyecto";
+            this.cmbProyecto.Size = new System.Drawing.Size(275, 24);
+            this.cmbProyecto.TabIndex = 15;
+            this.cmbProyecto.SelectedIndexChanged += new System.EventHandler(this.cmbProyecto_SelectedIndexChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(25, 46);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(66, 15);
+            this.label1.TabIndex = 16;
+            this.label1.Text = "Proyecto:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
+            this.label2.Location = new System.Drawing.Point(32, 76);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(59, 15);
+            this.label2.TabIndex = 17;
+            this.label2.Text = "Modulo:";
+            // 
+            // dataformas
+            // 
+            this.dataformas.AllowUserToAddRows = false;
+            this.dataformas.AllowUserToDeleteRows = false;
+            this.dataformas.AllowUserToOrderColumns = true;
+            this.dataformas.AllowUserToResizeRows = false;
+            this.dataformas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataformas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataformas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataformas.Location = new System.Drawing.Point(12, 177);
+            this.dataformas.MultiSelect = false;
+            this.dataformas.Name = "dataformas";
+            this.dataformas.ReadOnly = true;
+            this.dataformas.RowHeadersVisible = false;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.dataformas.RowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataformas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataformas.Size = new System.Drawing.Size(704, 170);
+            this.dataformas.TabIndex = 28;
             // 
             // tsbNuevo
             // 
@@ -121,85 +195,11 @@
             this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
             this.toolStripButton1.Text = "toolStripButton1";
             // 
-            // cmbModulo
-            // 
-            this.cmbModulo.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cmbModulo.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cmbModulo.BackColor = System.Drawing.Color.White;
-            this.cmbModulo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbModulo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.cmbModulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbModulo.FormattingEnabled = true;
-            this.cmbModulo.Location = new System.Drawing.Point(179, 88);
-            this.cmbModulo.Name = "cmbModulo";
-            this.cmbModulo.Size = new System.Drawing.Size(275, 24);
-            this.cmbModulo.TabIndex = 14;
-            this.cmbModulo.SelectedIndexChanged += new System.EventHandler(this.cmbModulo_SelectedIndexChanged);
-            // 
-            // cmbProyecto
-            // 
-            this.cmbProyecto.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cmbProyecto.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cmbProyecto.BackColor = System.Drawing.Color.White;
-            this.cmbProyecto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbProyecto.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.cmbProyecto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbProyecto.FormattingEnabled = true;
-            this.cmbProyecto.Location = new System.Drawing.Point(179, 58);
-            this.cmbProyecto.Name = "cmbProyecto";
-            this.cmbProyecto.Size = new System.Drawing.Size(275, 24);
-            this.cmbProyecto.TabIndex = 15;
-            this.cmbProyecto.SelectedIndexChanged += new System.EventHandler(this.cmbProyecto_SelectedIndexChanged);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(63, 58);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(66, 15);
-            this.label1.TabIndex = 16;
-            this.label1.Text = "Proyecto:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(70, 88);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(59, 15);
-            this.label2.TabIndex = 17;
-            this.label2.Text = "Modulo:";
-            // 
-            // dataformas
-            // 
-            this.dataformas.AllowUserToAddRows = false;
-            this.dataformas.AllowUserToDeleteRows = false;
-            this.dataformas.AllowUserToOrderColumns = true;
-            this.dataformas.AllowUserToResizeRows = false;
-            this.dataformas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataformas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataformas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataformas.Location = new System.Drawing.Point(12, 177);
-            this.dataformas.MultiSelect = false;
-            this.dataformas.Name = "dataformas";
-            this.dataformas.ReadOnly = true;
-            this.dataformas.RowHeadersVisible = false;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.dataformas.RowsDefaultCellStyle = dataGridViewCellStyle2;
-            this.dataformas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataformas.Size = new System.Drawing.Size(485, 150);
-            this.dataformas.TabIndex = 28;
-            // 
             // frmReporteFormas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(509, 339);
+            this.ClientSize = new System.Drawing.Size(728, 359);
             this.Controls.Add(this.dataformas);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -209,7 +209,7 @@
             this.Controls.Add(this.label14);
             this.Controls.Add(this.cmbForma);
             this.Name = "frmReporteFormas";
-            this.Text = "frmReporteFormas";
+            this.Text = "Reporte De Formas";
             this.Load += new System.EventHandler(this.frmReporteFormas_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();

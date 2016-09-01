@@ -177,7 +177,10 @@ namespace registroActividades.formas
                 CN.Abrir();
                 String frm = cmbForma.Text;
 
-                DT = CN.Ejecutar("select bd,tabla,sp,vista,funcion  from registroActividades where forma = '"+frm+"'");
+                DT = CN.Ejecutar("select objetos.nombre as tipo, tipodeObjeto.nombre as nombre , detalleActividad.bd as bd   from detalleActividad "
+                                 + " join objetos on Objetos.id = detalleActividad.idObjeto "
+                                 + " join tipodeObjeto on tipodeObjeto.id = Objetos.idTipo "
+                                 + " where idForma  ='" + frm + "'");
                 CN.Cerrar();
 
             }
@@ -221,7 +224,10 @@ namespace registroActividades.formas
                 CN.Abrir();
                 String frm = cmbForma.Text;
 
-                DT = CN.Ejecutar("select bd,tabla,sp,vista,funcion  from registroActividades where forma = '"+frm+"'");
+                DT = CN.Ejecutar("select objetos.nombre as tipo, tipodeObjeto.nombre as nombre , detalleActividad.bd as bd   from detalleActividad "
+                                 +" join objetos on Objetos.id = detalleActividad.idObjeto " 
+                                 +" join tipodeObjeto on tipodeObjeto.id = Objetos.idTipo "
+                                 +" where idForma  ='"+frm+"'");
                 CN.Cerrar();
 
             }

@@ -279,13 +279,13 @@ namespace registroActividades {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class tablaformaDataTable : global::System.Data.TypedTableBase<tablaformaRow> {
             
+            private global::System.Data.DataColumn columntipo;
+            
+            private global::System.Data.DataColumn columnnombre;
+            
             private global::System.Data.DataColumn columnbd;
             
-            private global::System.Data.DataColumn columntabla;
-            
-            private global::System.Data.DataColumn columnsp;
-            
-            private global::System.Data.DataColumn columnvista;
+            private global::System.Data.DataColumn columnforma;
             
             private global::System.Data.DataColumn columnfuncion;
             
@@ -324,6 +324,22 @@ namespace registroActividades {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn tipoColumn {
+                get {
+                    return this.columntipo;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn nombreColumn {
+                get {
+                    return this.columnnombre;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public global::System.Data.DataColumn bdColumn {
                 get {
                     return this.columnbd;
@@ -332,25 +348,9 @@ namespace registroActividades {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn tablaColumn {
+            public global::System.Data.DataColumn formaColumn {
                 get {
-                    return this.columntabla;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn spColumn {
-                get {
-                    return this.columnsp;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn vistaColumn {
-                get {
-                    return this.columnvista;
+                    return this.columnforma;
                 }
             }
             
@@ -399,13 +399,13 @@ namespace registroActividades {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public tablaformaRow AddtablaformaRow(string bd, string tabla, string sp, string vista, string funcion) {
+            public tablaformaRow AddtablaformaRow(string tipo, string nombre, string bd, string forma, string funcion) {
                 tablaformaRow rowtablaformaRow = ((tablaformaRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
+                        tipo,
+                        nombre,
                         bd,
-                        tabla,
-                        sp,
-                        vista,
+                        forma,
                         funcion};
                 rowtablaformaRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowtablaformaRow);
@@ -429,24 +429,24 @@ namespace registroActividades {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
+                this.columntipo = base.Columns["tipo"];
+                this.columnnombre = base.Columns["nombre"];
                 this.columnbd = base.Columns["bd"];
-                this.columntabla = base.Columns["tabla"];
-                this.columnsp = base.Columns["sp"];
-                this.columnvista = base.Columns["vista"];
+                this.columnforma = base.Columns["forma"];
                 this.columnfuncion = base.Columns["funcion"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             private void InitClass() {
+                this.columntipo = new global::System.Data.DataColumn("tipo", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columntipo);
+                this.columnnombre = new global::System.Data.DataColumn("nombre", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnombre);
                 this.columnbd = new global::System.Data.DataColumn("bd", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnbd);
-                this.columntabla = new global::System.Data.DataColumn("tabla", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columntabla);
-                this.columnsp = new global::System.Data.DataColumn("sp", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnsp);
-                this.columnvista = new global::System.Data.DataColumn("vista", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnvista);
+                this.columnforma = new global::System.Data.DataColumn("forma", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnforma);
                 this.columnfuncion = new global::System.Data.DataColumn("funcion", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnfuncion);
             }
@@ -591,6 +591,38 @@ namespace registroActividades {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string tipo {
+                get {
+                    try {
+                        return ((string)(this[this.tabletablaforma.tipoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'tipo\' de la tabla \'tablaforma\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabletablaforma.tipoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string nombre {
+                get {
+                    try {
+                        return ((string)(this[this.tabletablaforma.nombreColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'nombre\' de la tabla \'tablaforma\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabletablaforma.nombreColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string bd {
                 get {
                     try {
@@ -607,49 +639,17 @@ namespace registroActividades {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string tabla {
+            public string forma {
                 get {
                     try {
-                        return ((string)(this[this.tabletablaforma.tablaColumn]));
+                        return ((string)(this[this.tabletablaforma.formaColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'tabla\' de la tabla \'tablaforma\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'forma\' de la tabla \'tablaforma\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tabletablaforma.tablaColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string sp {
-                get {
-                    try {
-                        return ((string)(this[this.tabletablaforma.spColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'sp\' de la tabla \'tablaforma\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tabletablaforma.spColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string vista {
-                get {
-                    try {
-                        return ((string)(this[this.tabletablaforma.vistaColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'vista\' de la tabla \'tablaforma\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tabletablaforma.vistaColumn] = value;
+                    this[this.tabletablaforma.formaColumn] = value;
                 }
             }
             
@@ -671,6 +671,30 @@ namespace registroActividades {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IstipoNull() {
+                return this.IsNull(this.tabletablaforma.tipoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SettipoNull() {
+                this[this.tabletablaforma.tipoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsnombreNull() {
+                return this.IsNull(this.tabletablaforma.nombreColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetnombreNull() {
+                this[this.tabletablaforma.nombreColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsbdNull() {
                 return this.IsNull(this.tabletablaforma.bdColumn);
             }
@@ -683,38 +707,14 @@ namespace registroActividades {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IstablaNull() {
-                return this.IsNull(this.tabletablaforma.tablaColumn);
+            public bool IsformaNull() {
+                return this.IsNull(this.tabletablaforma.formaColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SettablaNull() {
-                this[this.tabletablaforma.tablaColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsspNull() {
-                return this.IsNull(this.tabletablaforma.spColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetspNull() {
-                this[this.tabletablaforma.spColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsvistaNull() {
-                return this.IsNull(this.tabletablaforma.vistaColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetvistaNull() {
-                this[this.tabletablaforma.vistaColumn] = global::System.Convert.DBNull;
+            public void SetformaNull() {
+                this[this.tabletablaforma.formaColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
