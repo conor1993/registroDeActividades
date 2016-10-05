@@ -42,7 +42,8 @@
             "Juan Manuel Lugo Quevedo",
             "Manuel Inostroza",
             "Cristian Cardenas",
-            "Alvaro Zavala"});
+            "Alvaro Zavala",
+            "Iliana chaidez"});
             this.cmbusuario.Location = new System.Drawing.Point(38, 116);
             this.cmbusuario.Name = "cmbusuario";
             this.cmbusuario.Size = new System.Drawing.Size(210, 23);
