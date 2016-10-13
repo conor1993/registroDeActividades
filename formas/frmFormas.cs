@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 
+
 namespace registroActividades.formas
 {
     public partial class frmFormas : Form
@@ -105,7 +106,8 @@ namespace registroActividades.formas
                 return;
 
             int id = (int)cmbModulo.SelectedValue;
-           
+
+     
             Conexion Con = new Conexion();
             Con.Abrir();
             using (SqlConnection connection = new SqlConnection(Con.ObtenerConexionString()))
@@ -129,6 +131,7 @@ namespace registroActividades.formas
                         connection.Open();
                         int recordsAffected = command.ExecuteNonQuery();
 
+                        //agregar bitacora
                         txtnombre.Text = "";
                         txtForma.Text = "";
                         cmbProyecto.SelectedIndex = -1;

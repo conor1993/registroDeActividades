@@ -10,19 +10,19 @@
        <Types>
         <Type Name="Conexion" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
          <Messages>
-          <Message TypeName="TypesThatOwnDisposableFieldsShouldBeDisposable" Category="Microsoft.Design" CheckId="CA1001" Status="Active" Created="2016-10-03 19:24:39Z" FixCategory="NonBreaking">
+          <Message TypeName="TypesThatOwnDisposableFieldsShouldBeDisposable" Category="Microsoft.Design" CheckId="CA1001" Status="Active" Created="2016-10-12 23:54:41Z" FixCategory="NonBreaking">
            <Issue Name="NonBreaking" Certainty="95" Level="CriticalError">Implement IDisposable on 'Conexion' because it creates members of the following IDisposable types: 'SqlConnection'.</Issue>
           </Message>
          </Messages>
          <Members>
           <Member Name="#Ejecutar(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2016-10-03 19:24:39Z" FixCategory="DependsOnFix">
-             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="C:\git\registroDeActividades\clases" File="Conexion.cs" Line="66">In method 'Conexion.Ejecutar(string)', object 'DS' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'DS' before all references to it are out of scope.</Issue>
-             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\git\registroDeActividades\clases" File="Conexion.cs" Line="64">In method 'Conexion.Ejecutar(string)', call System.IDisposable.Dispose on object 'CMD' before all references to it are out of scope.</Issue>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2016-10-12 23:54:41Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="C:\git\registroDeActividades\clases" File="Conexion.cs" Line="53">In method 'Conexion.Ejecutar(string)', object 'DS' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'DS' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\git\registroDeActividades\clases" File="Conexion.cs" Line="51">In method 'Conexion.Ejecutar(string)', call System.IDisposable.Dispose on object 'CMD' before all references to it are out of scope.</Issue>
             </Message>
-            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2016-10-03 19:24:39Z" FixCategory="DependsOnFix">
-             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="C:\git\registroDeActividades\clases" File="Conexion.cs" Line="64">The query string passed to 'SqlDataAdapter.SqlDataAdapter(string, SqlConnection)' in 'Conexion.Ejecutar(string)' could contain the following variables 'Comando'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2016-10-12 23:54:41Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="C:\git\registroDeActividades\clases" File="Conexion.cs" Line="51">The query string passed to 'SqlDataAdapter.SqlDataAdapter(string, SqlConnection)' in 'Conexion.Ejecutar(string)' could contain the following variables 'Comando'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
             </Message>
            </Messages>
           </Member>
@@ -34,24 +34,24 @@
        <Types>
         <Type Name="dtsFormas" Kind="Class" Accessibility="Public" ExternallyVisible="True">
          <Messages>
-          <Message TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240" Status="Active" Created="2016-10-03 19:24:39Z" FixCategory="NonBreaking">
+          <Message TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240" Status="Active" Created="2016-10-12 23:54:41Z" FixCategory="NonBreaking">
            <Issue Certainty="60" Level="Error">Add an implementation of GetObjectData to type 'dtsFormas'.</Issue>
           </Message>
          </Messages>
          <Members>
           <Member Name="#.ctor()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2016-10-03 19:24:39Z" FixCategory="NonBreaking">
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2016-10-12 23:54:41Z" FixCategory="NonBreaking">
              <Issue Certainty="95" Level="CriticalWarning" Path="C:\git\registroDeActividades" File="dtsFormas.Designer.cs" Line="29">'dtsFormas.dtsFormas()' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;dtsFormas..ctor()&#xD;&#xA;DataSet.BeginInit():Void&#xD;&#xA;dtsFormas.InitClass():Void&#xD;&#xA;DataSet.set_DataSetName(String):Void&#xD;&#xA;DataSet.set_Prefix(String):Void&#xD;&#xA;DataSet.set_Namespace(String):Void&#xD;&#xA;DataSet.set_EnforceConstraints(Boolean):Void&#xD;&#xA;DataSet.set_SchemaSerializationMode(SchemaSerializationMode):Void</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#.ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="CallBaseClassMethodsOnISerializableTypes" Category="Microsoft.Usage" CheckId="CA2236" Status="Active" Created="2016-10-03 19:24:39Z" FixCategory="NonBreaking">
+            <Message TypeName="CallBaseClassMethodsOnISerializableTypes" Category="Microsoft.Usage" CheckId="CA2236" Status="Active" Created="2016-10-12 23:54:41Z" FixCategory="NonBreaking">
              <Issue Certainty="95" Level="Error" Path="C:\git\registroDeActividades" File="dtsFormas.Designer.cs" Line="29">Method 'dtsFormas.dtsFormas(SerializationInfo, StreamingContext)' should be modified to call its base class implementation.</Issue>
             </Message>
-            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2016-10-03 19:24:39Z" FixCategory="DependsOnFix">
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2016-10-12 23:54:41Z" FixCategory="DependsOnFix">
              <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\git\registroDeActividades" File="dtsFormas.Designer.cs" Line="55">In method 'dtsFormas.dtsFormas(SerializationInfo, StreamingContext)', call System.IDisposable.Dispose on object 'ds' before all references to it are out of scope.</Issue>
              <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\git\registroDeActividades" File="dtsFormas.Designer.cs" Line="56">In method 'dtsFormas.dtsFormas(SerializationInfo, StreamingContext)', call System.IDisposable.Dispose on object 'new StringReader(strSchema)' before all references to it are out of scope.</Issue>
              <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\git\registroDeActividades" File="dtsFormas.Designer.cs" Line="70">In method 'dtsFormas.dtsFormas(SerializationInfo, StreamingContext)', call System.IDisposable.Dispose on object 'new StringReader(strSchema)' before all references to it are out of scope.</Issue>
@@ -60,14 +60,14 @@
           </Member>
           <Member Name="#GetSchemaSerializable()" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2016-10-03 19:24:39Z" FixCategory="DependsOnFix">
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2016-10-12 23:54:41Z" FixCategory="DependsOnFix">
              <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\git\registroDeActividades" File="dtsFormas.Designer.cs" Line="176">In method 'dtsFormas.GetSchemaSerializable()', call System.IDisposable.Dispose on object 'stream' before all references to it are out of scope.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#GetTypedDataSetSchema(System.Xml.Schema.XmlSchemaSet)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2016-10-03 19:24:39Z" FixCategory="DependsOnFix">
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2016-10-12 23:54:41Z" FixCategory="DependsOnFix">
              <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="C:\git\registroDeActividades" File="dtsFormas.Designer.cs" Line="237">In method 'dtsFormas.GetTypedDataSetSchema(XmlSchemaSet)', object 's1' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 's1' before all references to it are out of scope.</Issue>
              <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\git\registroDeActividades" File="dtsFormas.Designer.cs" Line="228">In method 'dtsFormas.GetTypedDataSetSchema(XmlSchemaSet)', call System.IDisposable.Dispose on object 'ds' before all references to it are out of scope.</Issue>
             </Message>
@@ -75,7 +75,7 @@
           </Member>
           <Member Name="#ReadXmlSerializable(System.Xml.XmlReader)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2016-10-03 19:24:39Z" FixCategory="DependsOnFix">
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2016-10-12 23:54:41Z" FixCategory="DependsOnFix">
              <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\git\registroDeActividades" File="dtsFormas.Designer.cs" Line="153">In method 'dtsFormas.ReadXmlSerializable(XmlReader)', call System.IDisposable.Dispose on object 'ds' before all references to it are out of scope.</Issue>
             </Message>
            </Messages>
@@ -84,14 +84,14 @@
         </Type>
         <Type Name="dtsFormas+tablaformaDataTable" Kind="Class" Accessibility="Public" ExternallyVisible="True">
          <Messages>
-          <Message TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240" Status="Active" Created="2016-10-03 19:24:39Z" FixCategory="NonBreaking">
+          <Message TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240" Status="Active" Created="2016-10-12 23:54:41Z" FixCategory="NonBreaking">
            <Issue Certainty="60" Level="Error">Add an implementation of GetObjectData to type 'dtsFormas.tablaformaDataTable'.</Issue>
           </Message>
          </Messages>
          <Members>
           <Member Name="#.ctor()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2016-10-03 19:24:39Z" FixCategory="NonBreaking">
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2016-10-12 23:54:41Z" FixCategory="NonBreaking">
              <Issue Certainty="95" Level="CriticalWarning" Path="C:\git\registroDeActividades" File="dtsFormas.Designer.cs" Line="292">'dtsFormas.tablaformaDataTable.tablaformaDataTable()' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;dtsFormas+tablaformaDataTable..ctor()&#xD;&#xA;DataTable.set_TableName(String):Void&#xD;&#xA;DataTable.BeginInit():Void</Issue>
              <Issue Certainty="95" Level="CriticalWarning" Path="C:\git\registroDeActividades" File="dtsFormas.Designer.cs" Line="292">'dtsFormas.tablaformaDataTable.tablaformaDataTable()' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;dtsFormas+tablaformaDataTable..ctor()&#xD;&#xA;DataTable.set_TableName(String):Void&#xD;&#xA;DataTable.BeginInit():Void&#xD;&#xA;dtsFormas+tablaformaDataTable.InitClass():Vo&#xD;&#xA;DataTable.EndInit():Void</Issue>
             </Message>
@@ -99,7 +99,7 @@
           </Member>
           <Member Name="#GetTypedTableSchema(System.Xml.Schema.XmlSchemaSet)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2016-10-03 19:24:39Z" FixCategory="DependsOnFix">
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2016-10-12 23:54:41Z" FixCategory="DependsOnFix">
              <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="C:\git\registroDeActividades" File="dtsFormas.Designer.cs" Line="542">In method 'dtsFormas.tablaformaDataTable.GetTypedTableSchema(XmlSchemaSet)', object 's1' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 's1' before all references to it are out of scope.</Issue>
              <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\git\registroDeActividades" File="dtsFormas.Designer.cs" Line="519">In method 'dtsFormas.tablaformaDataTable.GetTypedTableSchema(XmlSchemaSet)', call System.IDisposable.Dispose on object 'ds' before all references to it are out of scope.</Issue>
             </Message>
@@ -113,7 +113,7 @@
            <Accessors>
             <Accessor Name="#get_bd()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
              <Messages>
-              <Message TypeName="DoNotRaiseExceptionsInUnexpectedLocations" Category="Microsoft.Design" CheckId="CA1065" Status="Active" Created="2016-10-03 19:24:39Z" FixCategory="Breaking">
+              <Message TypeName="DoNotRaiseExceptionsInUnexpectedLocations" Category="Microsoft.Design" CheckId="CA1065" Status="Active" Created="2016-10-12 23:54:41Z" FixCategory="Breaking">
                <Issue Name="PropertyGetter" Certainty="90" Level="Warning" Path="C:\git\registroDeActividades" File="dtsFormas.Designer.cs" Line="632">'dtsFormas.tablaformaRow.bd.get()' creates an exception of type 'StrongTypingException', an exception type that should not be raised in a property. If this exception instance might be raised, use a different exception type, convert this property into a method, or change this property's logic so that it no longer raises an exception.</Issue>
               </Message>
              </Messages>
@@ -124,7 +124,7 @@
            <Accessors>
             <Accessor Name="#get_forma()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
              <Messages>
-              <Message TypeName="DoNotRaiseExceptionsInUnexpectedLocations" Category="Microsoft.Design" CheckId="CA1065" Status="Active" Created="2016-10-03 19:24:39Z" FixCategory="Breaking">
+              <Message TypeName="DoNotRaiseExceptionsInUnexpectedLocations" Category="Microsoft.Design" CheckId="CA1065" Status="Active" Created="2016-10-12 23:54:41Z" FixCategory="Breaking">
                <Issue Name="PropertyGetter" Certainty="90" Level="Warning" Path="C:\git\registroDeActividades" File="dtsFormas.Designer.cs" Line="648">'dtsFormas.tablaformaRow.forma.get()' creates an exception of type 'StrongTypingException', an exception type that should not be raised in a property. If this exception instance might be raised, use a different exception type, convert this property into a method, or change this property's logic so that it no longer raises an exception.</Issue>
               </Message>
              </Messages>
@@ -135,7 +135,7 @@
            <Accessors>
             <Accessor Name="#get_funcion()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
              <Messages>
-              <Message TypeName="DoNotRaiseExceptionsInUnexpectedLocations" Category="Microsoft.Design" CheckId="CA1065" Status="Active" Created="2016-10-03 19:24:39Z" FixCategory="Breaking">
+              <Message TypeName="DoNotRaiseExceptionsInUnexpectedLocations" Category="Microsoft.Design" CheckId="CA1065" Status="Active" Created="2016-10-12 23:54:41Z" FixCategory="Breaking">
                <Issue Name="PropertyGetter" Certainty="90" Level="Warning" Path="C:\git\registroDeActividades" File="dtsFormas.Designer.cs" Line="664">'dtsFormas.tablaformaRow.funcion.get()' creates an exception of type 'StrongTypingException', an exception type that should not be raised in a property. If this exception instance might be raised, use a different exception type, convert this property into a method, or change this property's logic so that it no longer raises an exception.</Issue>
               </Message>
              </Messages>
@@ -146,7 +146,7 @@
            <Accessors>
             <Accessor Name="#get_nombre()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
              <Messages>
-              <Message TypeName="DoNotRaiseExceptionsInUnexpectedLocations" Category="Microsoft.Design" CheckId="CA1065" Status="Active" Created="2016-10-03 19:24:39Z" FixCategory="Breaking">
+              <Message TypeName="DoNotRaiseExceptionsInUnexpectedLocations" Category="Microsoft.Design" CheckId="CA1065" Status="Active" Created="2016-10-12 23:54:41Z" FixCategory="Breaking">
                <Issue Name="PropertyGetter" Certainty="90" Level="Warning" Path="C:\git\registroDeActividades" File="dtsFormas.Designer.cs" Line="616">'dtsFormas.tablaformaRow.nombre.get()' creates an exception of type 'StrongTypingException', an exception type that should not be raised in a property. If this exception instance might be raised, use a different exception type, convert this property into a method, or change this property's logic so that it no longer raises an exception.</Issue>
               </Message>
              </Messages>
@@ -157,7 +157,7 @@
            <Accessors>
             <Accessor Name="#get_tipo()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
              <Messages>
-              <Message TypeName="DoNotRaiseExceptionsInUnexpectedLocations" Category="Microsoft.Design" CheckId="CA1065" Status="Active" Created="2016-10-03 19:24:39Z" FixCategory="Breaking">
+              <Message TypeName="DoNotRaiseExceptionsInUnexpectedLocations" Category="Microsoft.Design" CheckId="CA1065" Status="Active" Created="2016-10-12 23:54:41Z" FixCategory="Breaking">
                <Issue Name="PropertyGetter" Certainty="90" Level="Warning" Path="C:\git\registroDeActividades" File="dtsFormas.Designer.cs" Line="600">'dtsFormas.tablaformaRow.tipo.get()' creates an exception of type 'StrongTypingException', an exception type that should not be raised in a property. If this exception instance might be raised, use a different exception type, convert this property into a method, or change this property's logic so that it no longer raises an exception.</Issue>
               </Message>
              </Messages>
@@ -168,24 +168,24 @@
         </Type>
         <Type Name="dtsRegistrosActividad" Kind="Class" Accessibility="Public" ExternallyVisible="True">
          <Messages>
-          <Message TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240" Status="Active" Created="2016-10-03 19:24:39Z" FixCategory="NonBreaking">
+          <Message TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240" Status="Active" Created="2016-10-12 23:54:41Z" FixCategory="NonBreaking">
            <Issue Certainty="60" Level="Error">Add an implementation of GetObjectData to type 'dtsRegistrosActividad'.</Issue>
           </Message>
          </Messages>
          <Members>
           <Member Name="#.ctor()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2016-10-03 19:24:39Z" FixCategory="NonBreaking">
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2016-10-12 23:54:41Z" FixCategory="NonBreaking">
              <Issue Certainty="95" Level="CriticalWarning" Path="C:\git\registroDeActividades" File="dtsRegistrosActividad.Designer.cs" Line="29">'dtsRegistrosActividad.dtsRegistrosActividad()' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;dtsRegistrosActividad..ctor()&#xD;&#xA;DataSet.BeginInit():Void&#xD;&#xA;dtsRegistrosActividad.InitClass():Void&#xD;&#xA;DataSet.set_DataSetName(String):Void&#xD;&#xA;DataSet.set_Prefix(String):Void&#xD;&#xA;DataSet.set_Namespace(String):Void&#xD;&#xA;DataSet.set_EnforceConstraints(Boolean):Void&#xD;&#xA;DataSet.set_SchemaSerializationMode(SchemaSerializationMode):Void</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#.ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="CallBaseClassMethodsOnISerializableTypes" Category="Microsoft.Usage" CheckId="CA2236" Status="Active" Created="2016-10-03 19:24:39Z" FixCategory="NonBreaking">
+            <Message TypeName="CallBaseClassMethodsOnISerializableTypes" Category="Microsoft.Usage" CheckId="CA2236" Status="Active" Created="2016-10-12 23:54:41Z" FixCategory="NonBreaking">
              <Issue Certainty="95" Level="Error" Path="C:\git\registroDeActividades" File="dtsRegistrosActividad.Designer.cs" Line="29">Method 'dtsRegistrosActividad.dtsRegistrosActividad(SerializationInfo, StreamingContext)' should be modified to call its base class implementation.</Issue>
             </Message>
-            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2016-10-03 19:24:39Z" FixCategory="DependsOnFix">
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2016-10-12 23:54:41Z" FixCategory="DependsOnFix">
              <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\git\registroDeActividades" File="dtsRegistrosActividad.Designer.cs" Line="55">In method 'dtsRegistrosActividad.dtsRegistrosActividad(SerializationInfo, StreamingContext)', call System.IDisposable.Dispose on object 'ds' before all references to it are out of scope.</Issue>
              <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\git\registroDeActividades" File="dtsRegistrosActividad.Designer.cs" Line="56">In method 'dtsRegistrosActividad.dtsRegistrosActividad(SerializationInfo, StreamingContext)', call System.IDisposable.Dispose on object 'new StringReader(strSchema)' before all references to it are out of scope.</Issue>
              <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\git\registroDeActividades" File="dtsRegistrosActividad.Designer.cs" Line="70">In method 'dtsRegistrosActividad.dtsRegistrosActividad(SerializationInfo, StreamingContext)', call System.IDisposable.Dispose on object 'new StringReader(strSchema)' before all references to it are out of scope.</Issue>
@@ -194,14 +194,14 @@
           </Member>
           <Member Name="#GetSchemaSerializable()" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2016-10-03 19:24:39Z" FixCategory="DependsOnFix">
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2016-10-12 23:54:41Z" FixCategory="DependsOnFix">
              <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\git\registroDeActividades" File="dtsRegistrosActividad.Designer.cs" Line="176">In method 'dtsRegistrosActividad.GetSchemaSerializable()', call System.IDisposable.Dispose on object 'stream' before all references to it are out of scope.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#GetTypedDataSetSchema(System.Xml.Schema.XmlSchemaSet)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2016-10-03 19:24:39Z" FixCategory="DependsOnFix">
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2016-10-12 23:54:41Z" FixCategory="DependsOnFix">
              <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="C:\git\registroDeActividades" File="dtsRegistrosActividad.Designer.cs" Line="237">In method 'dtsRegistrosActividad.GetTypedDataSetSchema(XmlSchemaSet)', object 's1' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 's1' before all references to it are out of scope.</Issue>
              <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\git\registroDeActividades" File="dtsRegistrosActividad.Designer.cs" Line="228">In method 'dtsRegistrosActividad.GetTypedDataSetSchema(XmlSchemaSet)', call System.IDisposable.Dispose on object 'ds' before all references to it are out of scope.</Issue>
             </Message>
@@ -209,7 +209,7 @@
           </Member>
           <Member Name="#ReadXmlSerializable(System.Xml.XmlReader)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2016-10-03 19:24:39Z" FixCategory="DependsOnFix">
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2016-10-12 23:54:41Z" FixCategory="DependsOnFix">
              <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\git\registroDeActividades" File="dtsRegistrosActividad.Designer.cs" Line="153">In method 'dtsRegistrosActividad.ReadXmlSerializable(XmlReader)', call System.IDisposable.Dispose on object 'ds' before all references to it are out of scope.</Issue>
             </Message>
            </Messages>
@@ -218,14 +218,14 @@
         </Type>
         <Type Name="dtsRegistrosActividad+dtbRegistroActDataTable" Kind="Class" Accessibility="Public" ExternallyVisible="True">
          <Messages>
-          <Message TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240" Status="Active" Created="2016-10-03 19:24:39Z" FixCategory="NonBreaking">
+          <Message TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240" Status="Active" Created="2016-10-12 23:54:41Z" FixCategory="NonBreaking">
            <Issue Certainty="60" Level="Error">Add an implementation of GetObjectData to type 'dtsRegistrosActividad.dtbRegistroActDataTable'.</Issue>
           </Message>
          </Messages>
          <Members>
           <Member Name="#.ctor()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2016-10-03 19:24:39Z" FixCategory="NonBreaking">
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2016-10-12 23:54:41Z" FixCategory="NonBreaking">
              <Issue Certainty="95" Level="CriticalWarning" Path="C:\git\registroDeActividades" File="dtsRegistrosActividad.Designer.cs" Line="294">'dtsRegistrosActividad.dtbRegistroActDataTable.dtbRegistroActDataTable()' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;dtsRegistrosActividad+dtbRegistroActDataTable..ctor()&#xD;&#xA;DataTable.set_TableName(String):Void&#xD;&#xA;DataTable.BeginInit():Void</Issue>
              <Issue Certainty="95" Level="CriticalWarning" Path="C:\git\registroDeActividades" File="dtsRegistrosActividad.Designer.cs" Line="294">'dtsRegistrosActividad.dtbRegistroActDataTable.dtbRegistroActDataTable()' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;dtsRegistrosActividad+dtbRegistroActDataTable..ctor()&#xD;&#xA;DataTable.set_TableName(String):Void&#xD;&#xA;DataTable.BeginInit():Void&#xD;&#xA;dtsRegistrosActividad+dtbRegistroActDataTabl&#xD;&#xA;DataTable.EndInit():Void</Issue>
             </Message>
@@ -233,7 +233,7 @@
           </Member>
           <Member Name="#GetTypedTableSchema(System.Xml.Schema.XmlSchemaSet)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2016-10-03 19:24:39Z" FixCategory="DependsOnFix">
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2016-10-12 23:54:41Z" FixCategory="DependsOnFix">
              <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="C:\git\registroDeActividades" File="dtsRegistrosActividad.Designer.cs" Line="556">In method 'dtsRegistrosActividad.dtbRegistroActDataTable.GetTypedTableSchema(XmlSchemaSet)', object 's1' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 's1' before all references to it are out of scope.</Issue>
              <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\git\registroDeActividades" File="dtsRegistrosActividad.Designer.cs" Line="533">In method 'dtsRegistrosActividad.dtbRegistroActDataTable.GetTypedTableSchema(XmlSchemaSet)', call System.IDisposable.Dispose on object 'ds' before all references to it are out of scope.</Issue>
             </Message>
@@ -247,7 +247,7 @@
            <Accessors>
             <Accessor Name="#get_fin()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
              <Messages>
-              <Message TypeName="DoNotRaiseExceptionsInUnexpectedLocations" Category="Microsoft.Design" CheckId="CA1065" Status="Active" Created="2016-10-03 19:24:39Z" FixCategory="Breaking">
+              <Message TypeName="DoNotRaiseExceptionsInUnexpectedLocations" Category="Microsoft.Design" CheckId="CA1065" Status="Active" Created="2016-10-12 23:54:41Z" FixCategory="Breaking">
                <Issue Name="PropertyGetter" Certainty="90" Level="Warning" Path="C:\git\registroDeActividades" File="dtsRegistrosActividad.Designer.cs" Line="646">'dtsRegistrosActividad.dtbRegistroActRow.fin.get()' creates an exception of type 'StrongTypingException', an exception type that should not be raised in a property. If this exception instance might be raised, use a different exception type, convert this property into a method, or change this property's logic so that it no longer raises an exception.</Issue>
               </Message>
              </Messages>
@@ -258,7 +258,7 @@
            <Accessors>
             <Accessor Name="#get_forma()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
              <Messages>
-              <Message TypeName="DoNotRaiseExceptionsInUnexpectedLocations" Category="Microsoft.Design" CheckId="CA1065" Status="Active" Created="2016-10-03 19:24:39Z" FixCategory="Breaking">
+              <Message TypeName="DoNotRaiseExceptionsInUnexpectedLocations" Category="Microsoft.Design" CheckId="CA1065" Status="Active" Created="2016-10-12 23:54:41Z" FixCategory="Breaking">
                <Issue Name="PropertyGetter" Certainty="90" Level="Warning" Path="C:\git\registroDeActividades" File="dtsRegistrosActividad.Designer.cs" Line="678">'dtsRegistrosActividad.dtbRegistroActRow.forma.get()' creates an exception of type 'StrongTypingException', an exception type that should not be raised in a property. If this exception instance might be raised, use a different exception type, convert this property into a method, or change this property's logic so that it no longer raises an exception.</Issue>
               </Message>
              </Messages>
@@ -269,7 +269,7 @@
            <Accessors>
             <Accessor Name="#get_inicio()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
              <Messages>
-              <Message TypeName="DoNotRaiseExceptionsInUnexpectedLocations" Category="Microsoft.Design" CheckId="CA1065" Status="Active" Created="2016-10-03 19:24:39Z" FixCategory="Breaking">
+              <Message TypeName="DoNotRaiseExceptionsInUnexpectedLocations" Category="Microsoft.Design" CheckId="CA1065" Status="Active" Created="2016-10-12 23:54:41Z" FixCategory="Breaking">
                <Issue Name="PropertyGetter" Certainty="90" Level="Warning" Path="C:\git\registroDeActividades" File="dtsRegistrosActividad.Designer.cs" Line="630">'dtsRegistrosActividad.dtbRegistroActRow.inicio.get()' creates an exception of type 'StrongTypingException', an exception type that should not be raised in a property. If this exception instance might be raised, use a different exception type, convert this property into a method, or change this property's logic so that it no longer raises an exception.</Issue>
               </Message>
              </Messages>
@@ -280,7 +280,7 @@
            <Accessors>
             <Accessor Name="#get_modulo()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
              <Messages>
-              <Message TypeName="DoNotRaiseExceptionsInUnexpectedLocations" Category="Microsoft.Design" CheckId="CA1065" Status="Active" Created="2016-10-03 19:24:39Z" FixCategory="Breaking">
+              <Message TypeName="DoNotRaiseExceptionsInUnexpectedLocations" Category="Microsoft.Design" CheckId="CA1065" Status="Active" Created="2016-10-12 23:54:41Z" FixCategory="Breaking">
                <Issue Name="PropertyGetter" Certainty="90" Level="Warning" Path="C:\git\registroDeActividades" File="dtsRegistrosActividad.Designer.cs" Line="694">'dtsRegistrosActividad.dtbRegistroActRow.modulo.get()' creates an exception of type 'StrongTypingException', an exception type that should not be raised in a property. If this exception instance might be raised, use a different exception type, convert this property into a method, or change this property's logic so that it no longer raises an exception.</Issue>
               </Message>
              </Messages>
@@ -291,7 +291,7 @@
            <Accessors>
             <Accessor Name="#get_proyecto()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
              <Messages>
-              <Message TypeName="DoNotRaiseExceptionsInUnexpectedLocations" Category="Microsoft.Design" CheckId="CA1065" Status="Active" Created="2016-10-03 19:24:39Z" FixCategory="Breaking">
+              <Message TypeName="DoNotRaiseExceptionsInUnexpectedLocations" Category="Microsoft.Design" CheckId="CA1065" Status="Active" Created="2016-10-12 23:54:41Z" FixCategory="Breaking">
                <Issue Name="PropertyGetter" Certainty="90" Level="Warning" Path="C:\git\registroDeActividades" File="dtsRegistrosActividad.Designer.cs" Line="662">'dtsRegistrosActividad.dtbRegistroActRow.proyecto.get()' creates an exception of type 'StrongTypingException', an exception type that should not be raised in a property. If this exception instance might be raised, use a different exception type, convert this property into a method, or change this property's logic so that it no longer raises an exception.</Issue>
               </Message>
              </Messages>
@@ -302,7 +302,7 @@
            <Accessors>
             <Accessor Name="#get_usuario()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
              <Messages>
-              <Message TypeName="DoNotRaiseExceptionsInUnexpectedLocations" Category="Microsoft.Design" CheckId="CA1065" Status="Active" Created="2016-10-03 19:24:39Z" FixCategory="Breaking">
+              <Message TypeName="DoNotRaiseExceptionsInUnexpectedLocations" Category="Microsoft.Design" CheckId="CA1065" Status="Active" Created="2016-10-12 23:54:41Z" FixCategory="Breaking">
                <Issue Name="PropertyGetter" Certainty="90" Level="Warning" Path="C:\git\registroDeActividades" File="dtsRegistrosActividad.Designer.cs" Line="614">'dtsRegistrosActividad.dtbRegistroActRow.usuario.get()' creates an exception of type 'StrongTypingException', an exception type that should not be raised in a property. If this exception instance might be raised, use a different exception type, convert this property into a method, or change this property's logic so that it no longer raises an exception.</Issue>
               </Message>
              </Messages>
@@ -315,64 +315,88 @@
          <Members>
           <Member Name="#actividadesDiariasToolStripMenuItem_Click(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2016-10-03 19:24:39Z" FixCategory="DependsOnFix">
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2016-10-12 23:54:41Z" FixCategory="DependsOnFix">
              <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\git\registroDeActividades\formas" File="frmMenuPrincipal.cs" Line="62">In method 'frmMenu.actividadesDiariasToolStripMenuItem_Click(object, EventArgs)', call System.IDisposable.Dispose on object 'frm' before all references to it are out of scope.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#actividadesToolStripMenuItem_Click(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2016-10-03 19:24:39Z" FixCategory="DependsOnFix">
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2016-10-12 23:54:41Z" FixCategory="DependsOnFix">
              <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\git\registroDeActividades\formas" File="frmMenuPrincipal.cs" Line="68">In method 'frmMenu.actividadesToolStripMenuItem_Click(object, EventArgs)', call System.IDisposable.Dispose on object 'frm' before all references to it are out of scope.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#clientesToolStripMenuItem_Click(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2016-10-03 19:24:39Z" FixCategory="DependsOnFix">
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2016-10-12 23:54:41Z" FixCategory="DependsOnFix">
              <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\git\registroDeActividades\formas" File="frmMenuPrincipal.cs" Line="50">In method 'frmMenu.clientesToolStripMenuItem_Click(object, EventArgs)', call System.IDisposable.Dispose on object 'frm' before all references to it are out of scope.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#formasToolStripMenuItem_Click(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2016-10-03 19:24:39Z" FixCategory="DependsOnFix">
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2016-10-12 23:54:41Z" FixCategory="DependsOnFix">
              <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\git\registroDeActividades\formas" File="frmMenuPrincipal.cs" Line="44">In method 'frmMenu.formasToolStripMenuItem_Click(object, EventArgs)', call System.IDisposable.Dispose on object 'frm' before all references to it are out of scope.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#formasToolStripMenuItem1_Click(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2016-10-03 19:24:39Z" FixCategory="DependsOnFix">
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2016-10-12 23:54:41Z" FixCategory="DependsOnFix">
              <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\git\registroDeActividades\formas" File="frmMenuPrincipal.cs" Line="74">In method 'frmMenu.formasToolStripMenuItem1_Click(object, EventArgs)', call System.IDisposable.Dispose on object 'frm' before all references to it are out of scope.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#moduloToolStripMenuItem_Click(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2016-10-03 19:24:39Z" FixCategory="DependsOnFix">
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2016-10-12 23:54:41Z" FixCategory="DependsOnFix">
              <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\git\registroDeActividades\formas" File="frmMenuPrincipal.cs" Line="38">In method 'frmMenu.moduloToolStripMenuItem_Click(object, EventArgs)', call System.IDisposable.Dispose on object 'frm' before all references to it are out of scope.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#proyectoToolStripMenuItem_Click(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2016-10-03 19:24:39Z" FixCategory="DependsOnFix">
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2016-10-12 23:54:41Z" FixCategory="DependsOnFix">
              <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\git\registroDeActividades\formas" File="frmMenuPrincipal.cs" Line="30">In method 'frmMenu.proyectoToolStripMenuItem_Click(object, EventArgs)', call System.IDisposable.Dispose on object 'proyectos' before all references to it are out of scope.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#registroDeActividadesToolStripMenuItem_Click(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2016-10-03 19:24:39Z" FixCategory="DependsOnFix">
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2016-10-12 23:54:41Z" FixCategory="DependsOnFix">
              <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\git\registroDeActividades\formas" File="frmMenuPrincipal.cs" Line="56">In method 'frmMenu.registroDeActividadesToolStripMenuItem_Click(object, EventArgs)', call System.IDisposable.Dispose on object 'frm' before all references to it are out of scope.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#sotreToolStripMenuItem_Click(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2016-10-03 19:24:39Z" FixCategory="DependsOnFix">
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2016-10-12 23:54:41Z" FixCategory="DependsOnFix">
              <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\git\registroDeActividades\formas" File="frmMenuPrincipal.cs" Line="80">In method 'frmMenu.sotreToolStripMenuItem_Click(object, EventArgs)', call System.IDisposable.Dispose on object 'frm' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="registroActividades.clases">
+       <Types>
+        <Type Name="Bitacora" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
+         <Messages>
+          <Message TypeName="TypesThatOwnDisposableFieldsShouldBeDisposable" Category="Microsoft.Design" CheckId="CA1001" Status="Active" Created="2016-10-12 23:54:41Z" FixCategory="NonBreaking">
+           <Issue Name="NonBreaking" Certainty="95" Level="CriticalError">Implement IDisposable on 'Bitacora' because it creates members of the following IDisposable types: 'SqlConnection'.</Issue>
+          </Message>
+         </Messages>
+         <Members>
+          <Member Name="#guardarBitacora()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2016-10-12 23:54:41Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\git\registroDeActividades\clases" File="Bitacora.cs" Line="274">In method 'Bitacora.guardarBitacora()', call System.IDisposable.Dispose on object 'CMD' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\git\registroDeActividades\clases" File="Bitacora.cs" Line="275">In method 'Bitacora.guardarBitacora()', call System.IDisposable.Dispose on object 'DS' before all references to it are out of scope.</Issue>
+            </Message>
+            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2016-10-12 23:54:41Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="C:\git\registroDeActividades\clases" File="Bitacora.cs" Line="274">The query string passed to 'SqlDataAdapter.SqlDataAdapter(string, SqlConnection)' in 'Bitacora.guardarBitacora()' could contain the following variables 'this.cadena', 'this.NombreForma', 'this.usuario', 'this.accion'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
             </Message>
            </Messages>
           </Member>
@@ -386,14 +410,14 @@
          <Members>
           <Member Name="#btnEliminar_Click(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2016-10-03 19:24:39Z" FixCategory="DependsOnFix">
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2016-10-12 23:54:41Z" FixCategory="DependsOnFix">
              <Issue Certainty="75" Level="Warning" Path="C:\git\registroDeActividades\formas" File="frmActividades.cs" Line="229">Object 'connection' can be disposed more than once in method 'frmActividades.btnEliminar_Click(object, EventArgs)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 229</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#btnGuardar_Click(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2016-10-03 19:24:39Z" FixCategory="DependsOnFix">
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2016-10-12 23:54:41Z" FixCategory="DependsOnFix">
              <Issue Certainty="75" Level="Warning" Path="C:\git\registroDeActividades\formas" File="frmActividades.cs" Line="72">Object 'connection' can be disposed more than once in method 'frmActividades.btnGuardar_Click(object, EventArgs)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 72</Issue>
             </Message>
            </Messages>
@@ -404,7 +428,7 @@
          <Members>
           <Member Name="#crearReporte()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2016-10-03 19:24:39Z" FixCategory="DependsOnFix">
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2016-10-12 23:54:41Z" FixCategory="DependsOnFix">
              <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\git\registroDeActividades\formas" File="frmActividadesDiarias.cs" Line="102">In method 'frmActividadesDiarias.crearReporte()', call System.IDisposable.Dispose on object 'Reporte' before all references to it are out of scope.</Issue>
              <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\git\registroDeActividades\formas" File="frmActividadesDiarias.cs" Line="105">In method 'frmActividadesDiarias.crearReporte()', call System.IDisposable.Dispose on object 'visor' before all references to it are out of scope.</Issue>
             </Message>
@@ -416,14 +440,14 @@
          <Members>
           <Member Name="#toolStripButton1_Click(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2016-10-03 19:24:39Z" FixCategory="DependsOnFix">
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2016-10-12 23:54:41Z" FixCategory="DependsOnFix">
              <Issue Certainty="75" Level="Warning" Path="C:\git\registroDeActividades\formas" File="frmClientes.cs" Line="70">Object 'connection' can be disposed more than once in method 'frmClientes.toolStripButton1_Click(object, EventArgs)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 70</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#toolStripButton4_Click(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2016-10-03 19:24:39Z" FixCategory="DependsOnFix">
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2016-10-12 23:54:41Z" FixCategory="DependsOnFix">
              <Issue Certainty="75" Level="Warning" Path="C:\git\registroDeActividades\formas" File="frmClientes.cs" Line="225">Object 'connection' can be disposed more than once in method 'frmClientes.toolStripButton4_Click(object, EventArgs)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 225</Issue>
             </Message>
            </Messages>
@@ -434,15 +458,15 @@
          <Members>
           <Member Name="#toolStripButton1_Click(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2016-10-03 19:24:39Z" FixCategory="DependsOnFix">
-             <Issue Certainty="75" Level="Warning" Path="C:\git\registroDeActividades\formas" File="frmFormas.cs" Line="150">Object 'connection' can be disposed more than once in method 'frmFormas.toolStripButton1_Click(object, EventArgs)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 150</Issue>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2016-10-12 23:54:41Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\git\registroDeActividades\formas" File="frmFormas.cs" Line="153">Object 'connection' can be disposed more than once in method 'frmFormas.toolStripButton1_Click(object, EventArgs)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 153</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#toolStripButton4_Click(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2016-10-03 19:24:39Z" FixCategory="DependsOnFix">
-             <Issue Certainty="75" Level="Warning" Path="C:\git\registroDeActividades\formas" File="frmFormas.cs" Line="289">Object 'connection' can be disposed more than once in method 'frmFormas.toolStripButton4_Click(object, EventArgs)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 289</Issue>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2016-10-12 23:54:41Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\git\registroDeActividades\formas" File="frmFormas.cs" Line="292">Object 'connection' can be disposed more than once in method 'frmFormas.toolStripButton4_Click(object, EventArgs)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 292</Issue>
             </Message>
            </Messages>
           </Member>
@@ -452,7 +476,7 @@
          <Members>
           <Member Name="#button1_Click(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2016-10-03 19:24:39Z" FixCategory="DependsOnFix">
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2016-10-12 23:54:41Z" FixCategory="DependsOnFix">
              <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\git\registroDeActividades\formas" File="frminicio.cs" Line="25">In method 'frminicio.button1_Click(object, EventArgs)', call System.IDisposable.Dispose on object 'fr' before all references to it are out of scope.</Issue>
             </Message>
            </Messages>
@@ -463,15 +487,15 @@
          <Members>
           <Member Name="#toolStripButton1_Click(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2016-10-03 19:24:39Z" FixCategory="DependsOnFix">
-             <Issue Certainty="75" Level="Warning" Path="C:\git\registroDeActividades\formas" File="frmModulo.cs" Line="150">Object 'connection' can be disposed more than once in method 'frmModulo.toolStripButton1_Click(object, EventArgs)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 150</Issue>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2016-10-12 23:54:41Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\git\registroDeActividades\formas" File="frmModulo.cs" Line="158">Object 'connection' can be disposed more than once in method 'frmModulo.toolStripButton1_Click(object, EventArgs)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 158</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#toolStripButton4_Click(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2016-10-03 19:24:39Z" FixCategory="DependsOnFix">
-             <Issue Certainty="75" Level="Warning" Path="C:\git\registroDeActividades\formas" File="frmModulo.cs" Line="277">Object 'connection' can be disposed more than once in method 'frmModulo.toolStripButton4_Click(object, EventArgs)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 277</Issue>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2016-10-12 23:54:41Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\git\registroDeActividades\formas" File="frmModulo.cs" Line="297">Object 'connection' can be disposed more than once in method 'frmModulo.toolStripButton4_Click(object, EventArgs)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 297</Issue>
             </Message>
            </Messages>
           </Member>
@@ -481,14 +505,14 @@
          <Members>
           <Member Name="#toolStripButton1_Click(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2016-10-03 19:24:39Z" FixCategory="DependsOnFix">
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2016-10-12 23:54:41Z" FixCategory="DependsOnFix">
              <Issue Certainty="75" Level="Warning" Path="C:\git\registroDeActividades\formas" File="frmProyectocs.cs" Line="106">Object 'connection' can be disposed more than once in method 'frmProyectos.toolStripButton1_Click(object, EventArgs)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 106</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#toolStripButton4_Click(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2016-10-03 19:24:39Z" FixCategory="DependsOnFix">
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2016-10-12 23:54:41Z" FixCategory="DependsOnFix">
              <Issue Certainty="75" Level="Warning" Path="C:\git\registroDeActividades\formas" File="frmProyectocs.cs" Line="276">Object 'connection' can be disposed more than once in method 'frmProyectos.toolStripButton4_Click(object, EventArgs)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 276</Issue>
             </Message>
            </Messages>
@@ -499,15 +523,15 @@
          <Members>
           <Member Name="#guardarObjetos(System.String,System.String)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2016-10-03 19:24:39Z" FixCategory="DependsOnFix">
-             <Issue Certainty="75" Level="Warning" Path="C:\git\registroDeActividades\formas" File="frmRegistroActivadades.cs" Line="823">Object 'connection' can be disposed more than once in method 'frmRegistroActivadades.guardarObjetos(string, string)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 823</Issue>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2016-10-12 23:54:41Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\git\registroDeActividades\formas" File="frmRegistroActivadades.cs" Line="828">Object 'connection' can be disposed more than once in method 'frmRegistroActivadades.guardarObjetos(string, string)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 828</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#guardarRegistroActv()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2016-10-03 19:24:39Z" FixCategory="DependsOnFix">
-             <Issue Certainty="75" Level="Warning" Path="C:\git\registroDeActividades\formas" File="frmRegistroActivadades.cs" Line="913">Object 'connection' can be disposed more than once in method 'frmRegistroActivadades.guardarRegistroActv()'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 913</Issue>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2016-10-12 23:54:41Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\git\registroDeActividades\formas" File="frmRegistroActivadades.cs" Line="924">Object 'connection' can be disposed more than once in method 'frmRegistroActivadades.guardarRegistroActv()'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 924</Issue>
             </Message>
            </Messages>
           </Member>
@@ -517,7 +541,7 @@
          <Members>
           <Member Name="#crearReporte()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2016-10-03 19:24:39Z" FixCategory="DependsOnFix">
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2016-10-12 23:54:41Z" FixCategory="DependsOnFix">
              <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\git\registroDeActividades\formas" File="frmReporteFormas.cs" Line="197">In method 'frmReporteFormas.crearReporte()', call System.IDisposable.Dispose on object 'Reporte' before all references to it are out of scope.</Issue>
              <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\git\registroDeActividades\formas" File="frmReporteFormas.cs" Line="199">In method 'frmReporteFormas.crearReporte()', call System.IDisposable.Dispose on object 'visor' before all references to it are out of scope.</Issue>
             </Message>
@@ -529,7 +553,7 @@
          <Members>
           <Member Name="#crearReporte()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2016-10-03 19:24:39Z" FixCategory="DependsOnFix">
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2016-10-12 23:54:41Z" FixCategory="DependsOnFix">
              <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\git\registroDeActividades\formas" File="frmReporteStore.cs" Line="110">In method 'frmReporteStore.crearReporte()', call System.IDisposable.Dispose on object 'Reporte' before all references to it are out of scope.</Issue>
              <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\git\registroDeActividades\formas" File="frmReporteStore.cs" Line="112">In method 'frmReporteStore.crearReporte()', call System.IDisposable.Dispose on object 'visor' before all references to it are out of scope.</Issue>
             </Message>
@@ -545,7 +569,7 @@
          <Members>
           <Member Name="#CreateReport()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2016-10-03 19:24:39Z" FixCategory="DependsOnFix">
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2016-10-12 23:54:41Z" FixCategory="DependsOnFix">
              <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="C:\git\registroDeActividades\reportes" File="ReporteDeFormas.cs" Line="132">In method 'CachedReporteDeFormas.CreateReport()', object 'rpt' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'rpt' before all references to it are out of scope.</Issue>
             </Message>
            </Messages>
@@ -556,7 +580,7 @@
          <Members>
           <Member Name="#CreateReport()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2016-10-03 19:24:39Z" FixCategory="DependsOnFix">
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2016-10-12 23:54:41Z" FixCategory="DependsOnFix">
              <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="C:\git\registroDeActividades\reportes" File="reporteDeRegistoActividades.cs" Line="156">In method 'CachedreporteDeRegistoActividades.CreateReport()', object 'rpt' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'rpt' before all references to it are out of scope.</Issue>
             </Message>
            </Messages>
@@ -567,7 +591,7 @@
          <Members>
           <Member Name="#CreateReport()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2016-10-03 19:24:39Z" FixCategory="DependsOnFix">
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2016-10-12 23:54:41Z" FixCategory="DependsOnFix">
              <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="C:\git\registroDeActividades\reportes" File="reporteStore.cs" Line="132">In method 'CachedreporteStore.CreateReport()', object 'rpt' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'rpt' before all references to it are out of scope.</Issue>
             </Message>
            </Messages>
@@ -606,7 +630,7 @@
   <Rule TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202">
    <Name>Do not dispose objects multiple times</Name>
    <Description>A correctly implemented Dispose method can be called multiple times without throwing an exception. However, this is not guaranteed and to avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.</Description>
-   <Resolution Name="Default">Object {0} can be disposed more than once in method {1}. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 913</Resolution>
+   <Resolution Name="Default">Object {0} can be disposed more than once in method {1}. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 924</Resolution>
    <Owner>RuleOwner</Owner>
    <Url>http://msdn.microsoft.com/library/ms182334(VS.100).aspx</Url>
    <Email />

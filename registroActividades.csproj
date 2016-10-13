@@ -98,6 +98,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="clases\Bitacora.cs" />
     <Compile Include="clases\Conexion.cs" />
     <Compile Include="dtsFormas.Designer.cs">
       <AutoGen>True</AutoGen>

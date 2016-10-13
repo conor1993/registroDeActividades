@@ -92,6 +92,7 @@
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
+            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nupEstado)).BeginInit();
             this.toolStrip1.SuspendLayout();
@@ -459,7 +460,8 @@
             this.tsbNuevo,
             this.tsbGuardar,
             this.toolStripButton3,
-            this.toolStripButton1});
+            this.toolStripButton1,
+            this.toolStripButton2});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(1137, 25);
@@ -773,6 +775,16 @@
             this.label14.TabIndex = 8;
             this.label14.Text = "Base de datos:";
             // 
+            // toolStripButton2
+            // 
+            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
+            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton2.Name = "toolStripButton2";
+            this.toolStripButton2.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton2.Text = "toolStripButton2";
+           
+            // 
             // frmRegistroActivadades
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -862,5 +874,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn nombre4;
         private System.Windows.Forms.DataGridViewCheckBoxColumn seleccion2;
         private System.Windows.Forms.DataGridViewTextBoxColumn val2;
+        private System.Windows.Forms.ToolStripButton toolStripButton2;
     }
 }

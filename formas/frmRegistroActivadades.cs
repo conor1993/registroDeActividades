@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Collections;
+using registroActividades.clases;
 
 namespace registroActividades.formas
 {
@@ -41,6 +42,8 @@ namespace registroActividades.formas
 
         private void tsbNuevo_Click(object sender, EventArgs e)
         {
+
+
             if (!validar())
                 return;
             int idAct;
@@ -163,6 +166,8 @@ namespace registroActividades.formas
             }
 
             limpiarCampos();
+
+            
 
         }
 
@@ -893,6 +898,12 @@ namespace registroActividades.formas
                     {
                         connection.Open();
                         int recordsAffected = command.ExecuteNonQuery();
+                        Bitacora bit = new Bitacora(Con.ObtenerConexionString(),"JUAN");
+                        bit.recorrerForma(this,2);
+                        //agregar cambio a bitacora -----------------
+                      
+                        //-------------------------------------------
+
                         idAct = int.Parse(command.Parameters["idActividad"].Value.ToString());
                         MessageBox.Show("La actividad ha sido guardada.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                    
@@ -960,6 +971,11 @@ namespace registroActividades.formas
 
         }
         #endregion
+
+
+
+
+
 
 
     }

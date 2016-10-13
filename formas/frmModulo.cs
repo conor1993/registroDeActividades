@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using registroActividades.clases;
 
 namespace registroActividades.formas
 {
@@ -100,6 +101,7 @@ namespace registroActividades.formas
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
+
             if (!Validar())
                 return;
 
@@ -131,6 +133,12 @@ namespace registroActividades.formas
                         int recordsAffected = command.ExecuteNonQuery();
 
 
+                        //agregar  la bitacora
+                        
+                        Bitacora bitac = new Bitacora(Con.ObtenerConexionString(),"juan");
+                        bitac.recorrerForma(this, 2);
+                        //----------------------
+
 
                         LIMPIAR();
                         dataformas.DataSource = null;
@@ -148,8 +156,6 @@ namespace registroActividades.formas
 
                 }
             }
-
-
 
         }
 
@@ -195,6 +201,11 @@ namespace registroActividades.formas
                 int id = (int)dataformas.SelectedRows[0].Cells[0].Value;
                 buscar(id);
             }
+
+
+            Bitacora bitac = new Bitacora();
+            bitac.recorrerForma(this, 1);
+
         }
 
         private bool Validar()
@@ -255,6 +266,9 @@ namespace registroActividades.formas
                     {
                         connection.Open();
                         int recordsAffected = command.ExecuteNonQuery();
+
+
+
                         if (int.Parse(command.Parameters["borro"].Value.ToString()) > 0)
                              MessageBox.Show("El Modulo no  ha sido borrado.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         txtnombre.Text = "";
@@ -262,6 +276,12 @@ namespace registroActividades.formas
                         txtId.Text = "";
                         dataformas.DataSource = null;
                         llenarGrid();
+
+
+                        Bitacora bitac = new Bitacora(Con.ObtenerConexionString(),"juan");
+                        bitac.recorrerForma(this, 3);
+                        //bitacora
+
                     }
                     catch (SqlException ex)
                     {
@@ -283,6 +303,9 @@ namespace registroActividades.formas
         private void toolStripButton5_Click(object sender, EventArgs e)
         {
             LIMPIAR();
+            Bitacora bitac = new Bitacora();
+            bitac.limpiarTag(this);
+
         }
 
         private void LIMPIAR()
@@ -293,5 +316,6 @@ namespace registroActividades.formas
             cmbProyecto.SelectedIndex = -1;
             cmbProyecto.Text = "Seleccione una opción";
         }
+
     }
 }
